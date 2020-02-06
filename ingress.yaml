@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress
+  annotations:
+    plugins.konghq.com: rl-by-ip, request-id
+spec:
+  rules:
+    - http:
+        paths:
+        - path: /request-id
+          backend:
+            serviceName: echo
+            servicePort: 80
