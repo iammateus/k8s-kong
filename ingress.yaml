@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: ingress
   annotations:
-    plugins.konghq.com: rl-by-ip, request-id, jwt
+    plugins.konghq.com: rl-by-ip, my-request-id, jwt
 spec:
   rules:
     - http:
