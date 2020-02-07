@@ -1,25 +1,43 @@
 # K8sKong
 
-## Installs Kong Ingress Controller:
+## Installs Kong Ingress Controller
 
 ```
 curl -sL https://bit.ly/k4k8s | kubectl create -f -
 ```
 
-## Creates an echo service for testing
+### Creates an echo service for testing
 
 ```
 kubectl apply -f https://bit.ly/echo-service
 ```
 
-## Creates environment variable PROXY_IP with the cluter ip
+### Creates environment variable PROXY_IP with the cluter ip
 
 ```
 export PROXY_IP=$(minikube service -n kong kong-proxy --url | head -1)
 ```
 
-## Returns PROXY_IP
+### Returns PROXY_IP
 
 ```
 echo $PROXY_IP
+```
+
+### Applies all manifests
+
+```
+kubectl apply -f kong-plugin.yaml
+```
+
+```
+kubectl apply -f ingress.yaml
+```
+
+```
+kubectl apply -f kong-consumer.yaml
+```
+
+```
+kubectl apply -f kong-credential.yaml
 ```
