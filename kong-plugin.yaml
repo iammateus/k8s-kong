@@ -15,3 +15,8 @@ config:
   limit_by: ip
   policy: local
 plugin: rate-limiting
+
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+plugins:
+- name: jwt

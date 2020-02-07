@@ -3,12 +3,12 @@ kind: Ingress
 metadata:
   name: ingress
   annotations:
-    plugins.konghq.com: rl-by-ip, request-id
+    plugins.konghq.com: rl-by-ip, request-id, jwt
 spec:
   rules:
     - http:
         paths:
-        - path: /request-id
+        - path: /test
           backend:
             serviceName: echo
             servicePort: 80
