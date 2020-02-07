@@ -1,5 +1,7 @@
 # K8sKong
 
+This project contains a set of Kubernetes manifests to serve as an example of kubernetes-ingress-controller usage to manage microservices.
+
 ## Installs Kong Ingress Controller
 
 ```
