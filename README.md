@@ -12,13 +12,13 @@ curl -sL https://bit.ly/k4k8s | kubectl create -f -
 kubectl apply -f https://bit.ly/echo-service
 ```
 
-### Creates environment variable PROXY_IP with the cluter ip
+### Creates PROXY_IP environment variable with the cluter ip
 
 ```
 export PROXY_IP=$(minikube service -n kong kong-proxy --url | head -1)
 ```
 
-### Returns PROXY_IP
+### Prints cluter ip
 
 ```
 echo $PROXY_IP
